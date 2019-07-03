@@ -1,1 +1,30 @@
-<p>nav-bar works!</p>
+<div class="container">
+    <div class="row">
+        <div class="bg-white col-12 pt-1">
+            <div class="row">
+                <div class="col-3">
+                    <div class="row">
+                        <div class="col">
+                            <span class="nav-shop-mate-title" > {{title}} </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col pt-3 categorys">
+                    <div class="row" *ngIf="departments">
+                        <div *ngFor="let department of departments" class="col">
+                            <span class="font-weight-bold">{{department.name}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div [class.col-3]="!search_open" [class.col]="search_open">
+                    <div class="row">
+                        <div class="col-12 text-right">
+                            <span class="fa fa-search mr-5"></span>
+                            <span class="fa fa-shopping-bag ml-3"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
