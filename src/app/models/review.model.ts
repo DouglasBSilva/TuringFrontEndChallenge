@@ -10,12 +10,10 @@ export class Review {
     review?: string,
     rating?: number,
     created_on?: string,
-  ){
+  ) {
     this.name = name;
     this.review = review;
     this.rating = rating;
     this.created_on = created_on;
   }
-
-  
 }
