@@ -8,6 +8,12 @@ $pink :  #f62f5e;
   color:$pink;
 }
 
+.btn-link.text-pink:hover{
+  color: #fc839f;
+  text-decoration: underline;
+  background-color: transparent;
+  border-color: transparent;
+}
 
 body{
   font-family: Montserrat, sans-serif;

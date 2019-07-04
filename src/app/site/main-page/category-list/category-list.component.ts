@@ -8,7 +8,7 @@ import {Category} from '../../../models/category.model';
   templateUrl: './category-list.component.html',
   styleUrls: ['./category-list.component.scss']
 })
-export class CategoryListComponent implements OnInit, OnChanges {
+export class CategoryListComponent implements OnInit {
 
   @Input() department_id: number;
   public categories: Category[][];
@@ -30,21 +30,9 @@ export class CategoryListComponent implements OnInit, OnChanges {
             }, (error: Error) => {
               console.log(error);
             }
-        )
+        );
   }
-
-
   ngOnInit() {
-    if(this.department_id) {
-      this.getCategories(this.department_id)
-    }
+      this.getCategories();
   }
-
-  ngOnChanges(changes: SimpleChanges): void {
-
-    if(changes.department_id != null && this.department_id != null) {
-      this.getCategories(this.department_id);
-    }
-  }
-
 }

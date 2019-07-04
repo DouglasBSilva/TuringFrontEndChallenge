@@ -1,16 +1,11 @@
-<div class="container-fluid background-list-categories pt-5" *ngIf="categories && department_id">
+<div class="container-fluid background-list-categories pt-2 "   *ngIf="categories && department_id" [ngClass]="{'full-shadow-inset': categories && department_id}">
     <div class="row justify-content-center">
         <div class="col-11">
             <div class="row justify-content-center">
                 <div class="col-11">
                     <div class="row justify-content-center ">
                         <div *ngFor="let category of categories[department_id]" class="col-3 text-center">
-                            <button class="btn btn-link"><b>{{category.name}}</b></button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-
+                            <button class="btn btn-link text-pink"><b>{{category.name}}</b></button>
                         </div>
                     </div>
                 </div>

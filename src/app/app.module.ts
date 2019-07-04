@@ -8,13 +8,15 @@ import {DepartmentsService} from './services/departments.service';
 import {HttpClientModule} from '@angular/common/http';
 import { CategoryListComponent } from './site/main-page/category-list/category-list.component';
 import { SecondNavBarComponent } from './site/main-page/nav-bar/second-nav-bar/second-nav-bar.component';
+import { ProductsListComponent } from './site/main-page/products/products-list/products-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     CategoryListComponent,
-    SecondNavBarComponent
+    SecondNavBarComponent,
+    ProductsListComponent
   ],
   imports: [
     HttpClientModule,
