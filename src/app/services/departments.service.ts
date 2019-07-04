@@ -13,6 +13,6 @@ export class DepartmentsService {
 
 
   public get(): Observable<Department[]> {
-    return this.client.get<Department[]>('https://backendapi.turing.com'+this.base_url);
+    return this.client.get<Department[]>('https://backendapi.turing.com' + this.base_url);
   }
 }

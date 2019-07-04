@@ -1,9 +1,10 @@
+$pink :  #f62f5e;
 
 .nav-shop-mate-title{
   /* Style for "SHOPMATE" */
     width: 177px;
     height: 30px;
-    color: #f62f5e;
+    color: $pink;
     font-family: Montserrat;
     font-size: 24px;
     font-weight: 700;
@@ -17,8 +18,9 @@
   background-color: #ffffff;
 }
 
-.categorys span{
+.department .off{
   font-size: 15px;
   color: #2e2e2e;
 }
+
 

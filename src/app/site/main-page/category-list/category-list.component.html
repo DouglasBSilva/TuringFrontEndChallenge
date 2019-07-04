@@ -1,0 +1,20 @@
+<div class="container-fluid background-list-categories pt-5" *ngIf="categories && department_id">
+    <div class="row justify-content-center">
+        <div class="col-11">
+            <div class="row justify-content-center">
+                <div class="col-11">
+                    <div class="row justify-content-center ">
+                        <div *ngFor="let category of categories[department_id]" class="col-3 text-center">
+                            <button class="btn btn-link"><b>{{category.name}}</b></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

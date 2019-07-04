@@ -1,30 +1,45 @@
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="bg-white col-12 pt-1">
+        <div class="col-12">
+            <app-second-nav-bar></app-second-nav-bar>
             <div class="row">
-                <div class="col-3">
+                <div class="bg-white col-12 pt-3">
                     <div class="row">
                         <div class="col">
-                            <span class="nav-shop-mate-title" > {{title}} </span>
+                            <div class="row justify-content-start">
+                                <div class="col-3">
+                                    <span class="nav-shop-mate-title" > {{title}} </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-12 text-right pr-4">
+                                    <div class="row justify-content-end">
+                                        <div class="col-3">
+                                            <button class="btn btn-sm btn-link pb-1"><img alt="icon search" src="/assets/Icon/icons-search-black.png"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col pt-3 categorys">
-                    <div class="row" *ngIf="departments">
-                        <div *ngFor="let department of departments" class="col">
-                            <span class="font-weight-bold">{{department.name}}</span>
-                        </div>
-                    </div>
-                </div>
-                <div [class.col-3]="!search_open" [class.col]="search_open">
+            </div>
+            <div class="row">
+                <div class="bg-white col-12 ">
                     <div class="row">
-                        <div class="col-12 text-right">
-                            <span class="fa fa-search mr-5"></span>
-                            <span class="fa fa-shopping-bag ml-3"></span>
+                        <div class="col department">
+                            <div class="row justify-content-center" *ngIf="departments">
+                                <div *ngFor="let department of departments" class="col-4 col-md-2 col-lg-1">
+                                    <button class="btn btn-link font-weight-bold pointer" [class.off]="active_department != department.department_id" [class.text-pink]="active_department == department.department_id" (click)="openCategories(department.department_id)">{{department.name}}</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 </div>

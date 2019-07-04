@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {DepartmentsService} from '../../../services/departments.service';
 import {Department} from '../../../models/department.model';
 
@@ -10,13 +10,19 @@ import {Department} from '../../../models/department.model';
 export class NavBarComponent implements OnInit {
   public title = 'SHOPMATE';
   public departments: Department[];
-
+  public active_department: number;
+  @Output() onTryOpenCategories: EventEmitter<number> = new EventEmitter();
   constructor(
       private departmentService: DepartmentsService
 
   ) { }
 
-  private setCategorysNames() {
+  public openCategories(department_id: number){
+      this.active_department = (this.active_department === department_id ? 0 : department_id);
+      this.onTryOpenCategories.emit(department_id);
+  }
+
+  private setDepartmentsNames() {
    this.departmentService.get()
        .subscribe(
            (result: Department[]) => {
@@ -29,7 +35,7 @@ export class NavBarComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.setCategorysNames();
+    this.setDepartmentsNames();
   }
 
 }
