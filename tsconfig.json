@@ -1,7 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "src",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
@@ -17,6 +17,16 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@services/*": ["app/services/*"],
+      "@models/*": ["app/models/*"],
+      "@site/*": ["app/sites/*"],
+      "@nav-bar/*": ["app/main-page/nav-bar/*"],
+      "@products/*": ["app/main-page/products/*"],
+      "@second-navbar/*": ["app/main-page/nav-bar/second-navbar/*"],
+      "@category-list/*": ["app/main-page/category-list/*"],
+      "@main-page/*": ["app/main-page/*"]
+    }
   }
 }

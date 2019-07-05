@@ -9,6 +9,9 @@ import {HttpClientModule} from '@angular/common/http';
 import { CategoryListComponent } from './site/main-page/category-list/category-list.component';
 import { SecondNavBarComponent } from './site/main-page/nav-bar/second-nav-bar/second-nav-bar.component';
 import { ProductsListComponent } from './site/main-page/products/products-list/products-list.component';
+import { ProductsDetailComponent } from './site/main-page/products/products-detail/products-detail.component';
+import {FormsModule} from '@angular/forms';
+import { MainPageComponent } from './site/main-page/main-page.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +19,16 @@ import { ProductsListComponent } from './site/main-page/products/products-list/p
     NavBarComponent,
     CategoryListComponent,
     SecondNavBarComponent,
-    ProductsListComponent
+    ProductsListComponent,
+    ProductsDetailComponent,
+    MainPageComponent
   ],
-  imports: [
-    HttpClientModule,
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        HttpClientModule,
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule
+    ],
   providers: [
       DepartmentsService
   ],
