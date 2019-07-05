@@ -1,4 +1,4 @@
-import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {Component, EventEmitter, Output,Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {Department} from '../../../models/department.model';
 import {CategoriesService} from '../../../services/categories.service';
 import {Category} from '../../../models/category.model';
@@ -11,10 +11,17 @@ import {Category} from '../../../models/category.model';
 export class CategoryListComponent implements OnInit {
 
   @Input() department_id: number;
+  @Output() onChooseCategory: EventEmitter<number> = new EventEmitter();
+  public active_category: number;
+
   public categories: Category[][];
   constructor(
       private categoryService: CategoriesService
   ) { }
+
+  public chooseCategory(category_id: number){
+    this.active_category = category_id == this.active_category ? null : category_id;
+  }
 
   private getCategories() {
     this.categoryService.get()

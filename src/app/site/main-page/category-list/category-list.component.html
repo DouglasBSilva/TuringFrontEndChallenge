@@ -4,8 +4,10 @@
             <div class="row justify-content-center">
                 <div class="col-11">
                     <div class="row justify-content-center ">
-                        <div *ngFor="let category of categories[department_id]" class="col-3 text-center">
-                            <button class="btn btn-link text-pink"><b>{{category.name}}</b></button>
+                        <div *ngFor="let category of categories[department_id]" class="col-3 text-center category">
+                            <!-- <button class="btn btn-link text-pink"><b>{{category.name}}</b></button> -->
+                             <button class="btn btn-link font-weight-bold pointer" [class.off]="active_category != category.category_id" [class.text-pink]="
+                             active_category == category.category_id" (click)="chooseCategory(category.category_id)">{{category.name}}</button>
                         </div>
                     </div>
                 </div>

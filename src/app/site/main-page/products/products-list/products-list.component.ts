@@ -11,7 +11,7 @@ import {isNumeric} from 'rxjs/internal-compatibility';
 export class ProductsListComponent implements OnInit {
   public products_list: ProductComplete[];
   public page: number = 1;
-  public page_sent: number = 1;
+  public page_sent: number = 0;
   public total_products: number;
   public total_pages: number;
   public products_per_page: number = 6;
@@ -37,6 +37,13 @@ export class ProductsListComponent implements OnInit {
       }
   }
 
+  public sumPage(sum: number){
+    this.page = this.page + sum > this.total_pages || this.page + sum < 1? this.page : this.page + sum;
+    if(this.page != this.page_sent){
+      this.getProducts(this.page); 
+    }
+  }
+
   public getProductsByCategory(category_id: number, page: number = 1){
 
       this.productsService.get(page, this.products_per_page).subscribe(
@@ -49,16 +56,17 @@ export class ProductsListComponent implements OnInit {
   }
 
   public getProducts(page = 1){
-    this.productsService.get(page, this.products_per_page).subscribe(
-        result => {
-          this.products_list = result.rows;
-          this.total_products = result.count;
-          this.total_pages = Math.ceil((this.total_products / this.products_per_page));
-          this.page_sent = page;
-        }, error => {
-          console.log(error);
-        }
-    );
+      this.productsService.get(page, this.products_per_page).subscribe(
+          result => {
+            this.page = page;
+            this.products_list = result.rows;
+            this.total_products = result.count;
+            this.total_pages = Math.ceil((this.total_products / this.products_per_page));
+            this.page_sent = page;
+          }, error => {
+            console.log(error);
+          }
+      );
   }
 
   ngOnInit() {
