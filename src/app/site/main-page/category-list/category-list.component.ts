@@ -21,6 +21,7 @@ export class CategoryListComponent implements OnInit {
 
   public chooseCategory(category_id: number){
     this.active_category = category_id == this.active_category ? null : category_id;
+    this.onChooseCategory.emit(category_id);
   }
 
   private getCategories() {

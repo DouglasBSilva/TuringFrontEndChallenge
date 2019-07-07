@@ -1,0 +1,113 @@
+<div class="container p-3">
+    <div class="row justify-content-center">
+        <div class="col-11 border">
+            <div class="row pb-2">
+                <div class="col-6">
+                    <h5 class="font-weight-bold text-pink">
+                        Shipping Information
+                    </h5>
+                </div>
+            </div>
+            <div class=" row justify-content-center">
+                <div class="col-11">
+                    <div class="row">
+                        <div class="col-12 text-left item">
+                            <div class="row">
+                                <div class="col-3">
+                                    <label>Postal Code <span  class="text-danger font-weight-bold">*</span>: </label>
+                                </div>
+                                <div class="col">
+                                    <input class="form-control form-control-sm" type="text" [(ngModel)]="local_user.postal_code" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-left item">
+                            <div class="row">
+                                <div class="col-3">
+                                    <label>Address 1<span  class="text-danger font-weight-bold">*</span>: </label>
+                                </div>
+                                <div class="col">
+                                    <input class="form-control form-control-sm" type="text" [(ngModel)]="local_user.address_1" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-left item">
+                            <div class="row">
+                                <div class="col-3">
+                                    <label>Address 2<span  class="text-danger font-weight-bold">*</span>:</label>
+                                </div>
+                                <div class="col">
+                                    <input class="form-control form-control-sm" type="text" [(ngModel)]="local_user.address_2" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-left item">
+                            <div class="row">
+                                <div class="col-3">
+                                    <label>city<span  class="text-danger font-weight-bold">*</span>:</label>
+                                </div>
+                                <div class="col">
+                                    <input class="form-control form-control-sm" type="text" [(ngModel)]="local_user.city" >
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-left item">
+                            <div class="row">
+                                <div class="col-3">
+                                    <label>region<span  class="text-danger font-weight-bold">*</span>:</label>
+                                </div>
+                                <div class="col">
+                                    <input class="form-control form-control-sm" type="text" [(ngModel)]="local_user.region" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-left item">
+                            <div class="row">
+                                <div class="col-3">
+                                    <label>country<span  class="text-danger font-weight-bold">*</span>:</label>
+                                </div>
+                                <div class="col">
+                                    <input class="form-control form-control-sm" type="text" [(ngModel)]="local_user.country" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-left item">
+                            <div class="row">
+                                <div class="col-3">
+                                    <label>Shipping Region<span class="text-danger font-weight-bold">*</span>:</label>
+                                </div>
+                                <div class="col">
+                                    <select class="form-control form-control-sm"  [(ngModel)]="local_user.shipping_region_id">
+                                        <option *ngFor="let shipping of shippings" value="{{shipping.shipping_region_id}}">{{shipping.shipping_region}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row pb-2 justify-content-center mt-3" >
+                        <div class="col-4 text-center">
+                            <button class="btn btn-pink btn-sm btn-block" (click) = "confirmShippingInformation()"> Confirmar </button>
+                        </div>
+                        <div class="col-4 text-center btn-block">
+                            <button class="btn btn-secondary btn-block btn-sm " (click) = "bsModalRef.hide()" > Cancelar </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="container-fluid pt-3">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col">
+                                    <h4 class="font-weight-bold text-grey">{{cart_itens.length}} Item(s) in Your Cart</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <app-cart-list (onRemoveItem)="removeItem($event)"  [cart_itens]="cart_itens"></app-cart-list>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row border-top bg-grey p-3 justify-content-center">
+                <div class="col-10">
+                    <div class="row">
+                        <div class="col text-left">
+                            <button class="btn btn-light bg-white text-pink radius-25 btn-sm pr-2 pl-2" (click)="bsModalRef.hide()"> <b>Back to Shop</b> </button>
+                        </div>
+                        <div class="col text-right">
+                            <button class="btn btn-pink btn-sm radius-25 pr-2 pl-2" (click)="tryCheckout()" [disabled]="cart_itens.length < 1"> <b>Checkout</b></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

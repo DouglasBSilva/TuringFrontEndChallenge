@@ -1,3 +1,14 @@
-<app-nav-bar (onTryOpenCategories)="tryOpenCategory($event)"></app-nav-bar>
-<app-category-list [department_id]="department_id"></app-category-list>
-<app-products-list #product_list></app-products-list>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 p-0 bg-light">
+            <app-nav-bar (onTryOpenCategories)="tryOpenCategory($event)"></app-nav-bar>
+            <app-category-list (onChooseCategory)="tryFilterByCategory($event)" [department_id]="department_id"></app-category-list>
+            <div class="row mt-4 justify-content-center" >
+                <div class="col-11 bg-white">
+                    <app-products-list></app-products-list>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

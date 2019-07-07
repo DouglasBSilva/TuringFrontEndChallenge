@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ProductComplete} from '@models/product-complete.model';
 import {ProductsService} from '@services/products.service';
 import {isNumeric} from 'rxjs/internal-compatibility';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-products-list',
@@ -9,16 +10,29 @@ import {isNumeric} from 'rxjs/internal-compatibility';
   styleUrls: ['./products-list.component.scss']
 })
 export class ProductsListComponent implements OnInit {
+  private filter_id;
+  private list_type: string = '';
   public products_list: ProductComplete[];
   public page: number = 1;
   public page_sent: number = 0;
   public total_products: number;
   public total_pages: number;
   public products_per_page: number = 6;
-  constructor(private productsService: ProductsService) { }
+  constructor(
+      private productsService: ProductsService,
+      private activeRouter: ActivatedRoute
+  ) {}
 
-  public getProductsByDepartment(department_id: number){
-
+  private getProductsByDepartment(page: number = 1){
+      this.productsService.getByDepartment(page, this.products_per_page, this.filter_id).subscribe(
+          result => {
+              this.page = page;
+              this.products_list = result.rows;
+              this.total_products = result.count;
+              this.total_pages = Math.ceil((this.total_products / this.products_per_page));
+              this.page_sent = page;
+          }
+      );
   }
 
   public alterPage(event) {
@@ -40,22 +54,24 @@ export class ProductsListComponent implements OnInit {
   public sumPage(sum: number){
     this.page = this.page + sum > this.total_pages || this.page + sum < 1? this.page : this.page + sum;
     if(this.page != this.page_sent){
-      this.getProducts(this.page); 
+      this.getProducts(this.page);
     }
   }
 
-  public getProductsByCategory(category_id: number, page: number = 1){
+  private getProductsByCategory(page: number = 1){
 
-      this.productsService.get(page, this.products_per_page).subscribe(
+      this.productsService.getByCategory(page, this.products_per_page, this.filter_id).subscribe(
           result => {
+              this.page = page;
               this.products_list = result.rows;
-          }, error => {
-            console.log(error);
+              this.total_products = result.count;
+              this.total_pages = Math.ceil((this.total_products / this.products_per_page));
+              this.page_sent = page;
           }
       );
   }
 
-  public getProducts(page = 1){
+  private getProductsAll(page: number = 1){
       this.productsService.get(page, this.products_per_page).subscribe(
           result => {
             this.page = page;
@@ -63,14 +79,34 @@ export class ProductsListComponent implements OnInit {
             this.total_products = result.count;
             this.total_pages = Math.ceil((this.total_products / this.products_per_page));
             this.page_sent = page;
-          }, error => {
-            console.log(error);
           }
       );
   }
 
-  ngOnInit() {
-    this.getProducts();
+    /**
+     *
+     * @param page
+     *
+     * @function check if the page is from department or category to send the righ request
+     */
+  private getProducts(page: number = 1){
+          if((this.list_type).toLowerCase() === 'department') {
+                this.getProductsByDepartment(page);
+          }else if((this.list_type).toLowerCase() === 'category') {
+              this.getProductsByCategory(page);
+          }else{
+                this.getProductsAll(page);
+          }
   }
 
+  setListFilter = (list_type: string = '', item_id: number = 0) => {
+      this.list_type = list_type;
+      this.filter_id = item_id;
+      this.getProducts();
+  }
+
+  ngOnInit() {
+      this.filter_id = this.activeRouter.snapshot.paramMap.get('id');
+      this.getProducts();
+  }
 }

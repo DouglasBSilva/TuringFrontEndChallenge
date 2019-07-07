@@ -1,12 +1,93 @@
-<div class="modal-header">
-    <h4 class="modal-title pull-left">titulo</h4>
-    <button type="button" class="close pull-right" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-    </button>
-</div>
-<div class="modal-body">
-    texto
-</div>
-<div class="modal-footer">
-    <button type="button" class="btn btn-default" ></button>
-</div>
+ <div class="container bg-white mb-3" >
+        <div class="row" *ngIf="product">
+            <div class="col-12">
+                <div class="row justify-content-center p-5">
+                    <div class="col-12 col-lg-6 mb-4">
+                        <div class="row justify-content-center mb-3">
+                             <div class="col-12 text-center h-200">
+                                 <img  class="img-fluid" src="https://backendapi.turing.com/images/products/{{selected_image}}">
+                             </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <img  class="img-fluid" (click)="selected_image = product.image" [class.border-pink]="selected_image == product.image" src="https://backendapi.turing.com/images/products/{{product.image}}">
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <img  class="img-fluid" (click)="selected_image = product.image_2" [class.border-pink]="selected_image == product.image_2"  src="https://backendapi.turing.com/images/products/{{product.image_2}}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <h3 class="font-weight-bold text-grey">
+                                    {{product.name}}
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col-12">
+                                <div class="row" *ngIf="product.discounted_price > 0">
+                                    <div class="col-12">
+                                          <span class="line-through">
+                                            $ {{(product.price * quantity).toFixed(2)}}
+                                         </span>
+                                        <h5 class="text-pink font-weight-bold">
+                                            $ {{(product.discounted_price * quantity).toFixed(2)}}
+                                            </h5>
+                                    </div>
+                                </div>
+                                <div class="row" *ngIf="product.discounted_price <= 0">
+                                    <div class="col-12">
+                                        <h5 class="text-pink font-weight-bold">
+                                            $ {{(product.price * quantity).toFixed(2)}}
+                                        </h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <span>
+                                    {{product.description}}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-12" >
+                                        <ng-container *ngIf="attributes">
+                                            <div class="form-group row justify-content-start" *ngFor="let attribute of attributes; let i = index" >
+                                                <div class="col-6 col-lg-4">
+                                                    <label for="size" class="text-grey font-weight-bold"> {{attribute[0].attribute_name}} </label>
+                                                    <select id="size" class="form-control form-control-sm" [(ngModel)]="attributes_selected[i]">
+                                                        <option *ngFor="let option of attribute" value="{{option.attribute_value}}">{{option.attribute_value}}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </ng-container>
+
+
+                                            <div class="form-group row justify-content-start">
+                                                <div class=" col-sm-4">
+                                                    <button class="btn btn-pink btn-block" (click)="addToCart()" ><b>Add to Cart</b></button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+
+                    </div>
+                </div>
+            </div>
+        </div>

@@ -15,20 +15,20 @@ export class Customer{
   public credit_card : string;
 
   constructor(
-    customer_id : number,
-    name        : string,
-    email       : string,
-    address_1   : string,
-    address_2   : string,
-    city        : string,
-    region      : string,
-    postal_code : string,
-    country     : string,
-    shipping_region_id     : number,
-    day_phone   : string,
-    eve_phone   : string,
-    mob_phone   : string,
-    credit_card : string
+    customer_id? : number,
+    name?        : string,
+    email?       : string,
+    address_1?   : string,
+    address_2?   : string,
+    city?        : string,
+    region?      : string,
+    postal_code? : string,
+    country?     : string,
+    shipping_region_id?     : number,
+    day_phone?   : string,
+    eve_phone?   : string,
+    mob_phone?   : string,
+    credit_card? : string
   ){
     this.customer_id = customer_id;
     this.name        = name;
@@ -44,5 +44,23 @@ export class Customer{
     this.eve_phone   = eve_phone;
     this.mob_phone   = mob_phone;
     this.credit_card = credit_card ;
+  }
+
+  public userCanBuy(): boolean{
+    let can_buy: boolean = false;
+
+    can_buy = !!(
+                        this.email &&
+                        this.name &&
+                        this.address_1 &&
+                        this.address_2 &&
+                        this.country &&
+                        this.credit_card &&
+                        this.shipping_region_id &&
+                        this.postal_code &&
+                        this.region &&
+                        this.city
+                  );
+    return can_buy;
   }
 }

@@ -1,25 +1,68 @@
+// regular style toast
+@import '~ngx-toastr/toastr';
+
+// bootstrap style toast
+// or import a bootstrap 4 alert styled design (SASS ONLY)
+// should be after your bootstrap imports, it uses bs4 variables, mixins, functions
+
+// if you'd like to use it without importing all of bootstrap it requires
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~ngx-toastr/toastr-bs4-alert';
+
 $pink :  #f62f5e;
-
-.text-pink{
-  color:$pink;
-}
-
-.bg-pink{
-  background:$pink;
-}
-
-.btn-link.text-pink:hover{
-  color: #fc839f;
-  text-decoration: underline;
-  background-color: transparent;
-  border-color: transparent;
-}
+$dark: #2e2e2e;
+$grey: #efefef;
+$blue-facebook: #3b5998;
 
 body{
   font-family: Montserrat, sans-serif;
   font-size: 15px;
 }
 
+.text-pink{
+  color:$pink;
+}
+.text-grey{
+  color: $dark;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+.border-pink{
+  border: $pink solid;
+}
+.bg-grey{
+  background:$grey
+}
+.bg-pink{
+  background:$pink;
+}
+.btn-link.text-pink:hover{
+  color: #fc839f;
+  text-decoration: underline;
+  background-color: transparent;
+  border-color: transparent;
+}
+.max-w-1200{
+  max-width: 1200px;
+}
+
+
+.btn-facebook{
+  color: #fff;
+  background-color: $blue-facebook;
+  border-color: $blue-facebook;
+}
+
+.btn-facebook:hover{
+  color: $blue-facebook;
+  background-color: $grey;
+  border-color: $blue-facebook;
+}
 .btn-pink{
   color: #fff;
   background-color: $pink;

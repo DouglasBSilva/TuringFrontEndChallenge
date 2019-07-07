@@ -3,7 +3,7 @@ import {Product} from './product.model';
 export class ProductComplete extends Product{
 
   public image: string;
-  public image2: string;
+  public image_2: string;
   public display: string;
 
   constructor(
@@ -14,12 +14,12 @@ export class ProductComplete extends Product{
     discounted_price: string,
     thumbnail: string,
     image: string,
-    image2: string,
+    image_2: string,
     display: string
   ){
     super(product_id, name, description, price, discounted_price, thumbnail);
     this.image = image;
-    this.image2 = image2;
+    this.image_2 = image_2;
     this.display = display;
   }
 }

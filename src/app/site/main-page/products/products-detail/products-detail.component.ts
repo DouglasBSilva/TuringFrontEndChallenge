@@ -14,8 +14,8 @@ export class ProductsDetailComponent implements OnInit {
   	) { }
 
   public openProduct(){
-      const initialState = {};
-      this.bsModalService.show(ProductsDetailCompleteComponent, {initialState,class:' h-100 modal-lg'});
+      const initialState = {product_id: this.product.product_id};
+      this.bsModalService.show(ProductsDetailCompleteComponent, {initialState, class: 'max-w-1200'});
   }
 
   ngOnInit() {

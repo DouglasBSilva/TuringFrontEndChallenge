@@ -4,12 +4,16 @@
                 <div class="bg-dark col-12 pt-3">
                     <div class="row">
                         <div class="col pr-0">
-                            <div class="row">
-                                <div class="col pr-0 text-left font-weight-bold">
+                            <div class="row" *ngIf="customersService.user">
+                                <div class="col pr-0 text-left font-weight-bold" *ngIf="!customersService.user.name">
                                     <span class="text-white d-none d-md-inline" >Hi!</span>
-                                    <button class="text-pink btn btn-sm btn-link" ><b>Sign<span class="d-none d-md-inline"> In</span></b></button>
+                                    <button class="text-pink btn btn-sm btn-link" (click)="openLoginModal()"><b>Sign<span class="d-none d-md-inline"> In</span></b></button>
                                     <span class="text-white d-none d-md-inline " >or</span>
-                                    <button class="text-pink btn btn-link btn-sm " > <b>Register</b> </button>
+                                    <button class="text-pink btn btn-link btn-sm " (click)="openRegisterModal()"> <b>Register</b> </button>
+                                </div>
+                                <div class="col pr-0 text-left font-weight-bold" *ngIf="customersService.user.name">
+                                    <span class="text-white d-none d-md-inline" >Hi!</span>
+                                    <button class="text-pink btn btn-sm btn-link" (click)="openUserDetail()"><b>{{customersService.user.name}}</b></button>
                                 </div>
                             </div>
                         </div>
@@ -18,8 +22,10 @@
                                 <div class="col-12 text-right">
                                     <div class="row">
                                         <div class="col pr-4">
-                                            <button class="btn btn-sm btn-link pb-1"><img alt="icon bag" src="/assets/Icon/icons-bag-white.png"></button>
-                                            <span class="text-white font-weight-bold"> <span class="d-none d-md-inline">Your Bag: </span> <b class="text-pink">$ 0.00</b></span>
+                                            <img alt="icon bag" src="/assets/Icon/icons-bag-white.png">
+                                            <button class="btn btn-sm btn-link pb-1 text-white" (click)="openCart()">
+                                                <span class="text-white font-weight-bold"> <span class="d-none d-md-inline">Your Bag: </span> <b class="text-pink">$ {{cartService.amount || '0.00'}}</b></span>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>

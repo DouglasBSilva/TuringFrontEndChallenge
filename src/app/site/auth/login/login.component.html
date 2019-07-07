@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-right">
+            <button class="btn btn-link text-pink font-weight-bold" (click)="bsModalRef.hide()"><span class="fa fa-close"></span></button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 p-5">
+            <div class="row justify-content-center">
+                <div class="col-6 text-center text-pink mb-3 ">
+                    <span class="h5 font-weight-bold">Login</span>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-6">
+                    <button class="btn btn-facebook btn-block" (click)="loginFacebook()">Facebook<span class="fa fa-facebook"></span></button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center text-pink mt-2 mb-2">
+                    <span class="h5 font-weight-bold"> or </span>
+                </div>
+            </div>
+            <div class="row">
+                <form class="form-control form-group pl-3 pt-3 pr-3 pb-1">
+                    <div class="col-12">
+                        <div class="form-group row">
+                            <div class="col-12">
+                                <label for="email">Email <b class="text-danger">*</b></label>
+                                <input type="email" id="email" placeholder="Email" class="form-control form-control-sm" required value="" name="email" [(ngModel)]="email"/>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-12">
+                                <label for="password">Password <b class="text-danger">*</b></label>
+                                <input type="password" id="password" placeholder="Password" class="form-control form-control-sm" required value="" name="password" [(ngModel)] = "password" />
+                            </div>
+                          </div>
+                        <div class="form-group row justify-content-center">
+                            <div class="col-12 text-center">
+                                <button  class="btn btn-pink" (click)="login()" >Sign In</button>
+                            </div>
+                        </div>
+                        <div class=" row justify-content-start">
+                            <div class="col-12 signin_button_div">
+                                <span>Don't have an account?</span>
+                                <button  class="btn btn-link pl-1 signin_button_div">Register</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

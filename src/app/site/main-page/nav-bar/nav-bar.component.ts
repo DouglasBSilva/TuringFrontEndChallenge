@@ -1,6 +1,9 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {DepartmentsService} from '../../../services/departments.service';
 import {Department} from '../../../models/department.model';
+import {BsModalService} from 'ngx-bootstrap';
+import {LoginComponent} from '../../auth/login/login.component';
+import {RegisterComponent} from '../../auth/register/register.component';
 
 @Component({
   selector: 'app-nav-bar',
@@ -16,6 +19,7 @@ export class NavBarComponent implements OnInit {
       private departmentService: DepartmentsService
 
   ) { }
+
 
   public openCategories(department_id: number){
       this.active_department = (this.active_department === department_id ? 0 : department_id);

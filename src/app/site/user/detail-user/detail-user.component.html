@@ -1,0 +1,148 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center p-5">
+            <span class="fa fa-user-circle fa-4x"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center text-pink">
+            <h3 class="font-weight-bold">{{local_user.name}}</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-left item pt-2">
+          <label class="font-weight-bold text-pink">Email: </label> <span>{{local_user.email}}</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-10 text-left item pt-2 form-group form-inline">
+            <label>Credit Card: </label>
+            <input class="form-control form-inline" [disabled]="!bl_edit_credit_card" [(ngModel)]="local_user.credit_card">
+        </div>
+        <div class="col-2 text-center">
+            <button class="btn btn-link text-pink" (click)="bl_edit_credit_card = true" *ngIf="!bl_edit_credit_card"> <span class="fa fa-edit item"></span></button>
+            <button class="btn btn-link text-pink" (click)="updateCreditCard()" *ngIf="bl_edit_credit_card"> <span class="fa fa-save item"></span></button>
+            <button class="btn btn-link text-pink" (click)="closeCreditCard()" *ngIf="bl_edit_credit_card"> <span class="fa fa-close item"></span></button>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-11 border">
+            <div class="row pb-2">
+                <div class="col-6">
+                    <h5 class="font-weight-bold text-pink">
+                        Location Information
+                    </h5>
+                </div>
+                <div class="col text-right">
+                    <button class="btn btn-link text-pink" (click) = "bl_edit_address = true" [class.d-none]="bl_edit_address"> <span class="fa fa-edit item"></span></button>
+                </div>
+            </div>
+            <div class=" row justify-content-center">
+                <div class="col-11">
+                    <div class="row">
+                        <div class="col-12 text-left item">
+                            <div class="row">
+                                <div class="col-3" [class.text-dark]="bl_edit_address">
+                                    <label>Postal Code <span *ngIf="bl_edit_address" class="text-danger font-weight-bold">*</span>: </label>
+                                </div>
+                                <div class="col">
+                                    <input class="form-control form-control-sm" type="text" [(ngModel)]="local_user.postal_code" [disabled]="!bl_edit_address">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-left item">
+                            <div class="row">
+                                <div class="col-3">
+                                    <label>Address 1<span *ngIf="bl_edit_address" class="text-danger font-weight-bold">*</span>: </label>
+                                </div>
+                                <div class="col">
+                                    <input class="form-control form-control-sm" type="text" [(ngModel)]="local_user.address_1" [disabled]="!bl_edit_address">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-left item">
+                            <div class="row">
+                                <div class="col-3">
+                                    <label>Address 2<span *ngIf="bl_edit_address" class="text-danger font-weight-bold">*</span>:</label>
+                                </div>
+                                <div class="col">
+                                    <input class="form-control form-control-sm" type="text" [(ngModel)]="local_user.address_2" [disabled]="!bl_edit_address">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-left item">
+                            <div class="row">
+                                <div class="col-3">
+                                    <label>city<span *ngIf="bl_edit_address" class="text-danger font-weight-bold">*</span>:</label>
+                                </div>
+                                <div class="col">
+                                    <input class="form-control form-control-sm" type="text" [(ngModel)]="local_user.city" [disabled]="!bl_edit_address">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-left item">
+                            <div class="row">
+                                <div class="col-3">
+                                    <label>region<span *ngIf="bl_edit_address" class="text-danger font-weight-bold">*</span>:</label>
+                                </div>
+                                <div class="col">
+                                    <input class="form-control form-control-sm" type="text" [(ngModel)]="local_user.region" [disabled]="!bl_edit_address">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-left item">
+                            <div class="row">
+                                <div class="col-3">
+                                    <label>country<span *ngIf="bl_edit_address" class="text-danger font-weight-bold">*</span>:</label>
+                                </div>
+                                <div class="col">
+                                    <input class="form-control form-control-sm" type="text" [(ngModel)]="local_user.country" [disabled]="!bl_edit_address">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-left item">
+                            <div class="row">
+                                <div class="col-3">
+                                    <label>Shipping Region<span *ngIf="bl_edit_address" class="text-danger font-weight-bold">*</span>:</label>
+                                </div>
+                                <div class="col">
+                                    <span *ngIf="(!bl_edit_address && local_user.shipping_region_id == 1)">{{user_shipping}}</span>
+                                    <select *ngIf="((bl_edit_address || local_user.shipping_region_id != 1) && shippings)" class="form-control form-control-sm" type="text" [(ngModel)]="local_user.shipping_region_id" [disabled]="!bl_edit_address">
+                                        <option *ngFor="let shipping of shippings" value="{{shipping.shipping_region_id}}">{{shipping.shipping_region}}</option>
+                                    </select>
+                                </div>
+                              </div>
+                            </div>
+
+                        </div>
+                        <div class="row pb-2 justify-content-center" *ngIf="bl_edit_address">
+                            <div class="col-4 text-center">
+                                <button class="btn btn-pink btn-sm btn-block" (click) = "updateAddress()"> Salvar </button>
+                            </div>
+                            <div class="col-4 text-center btn-block">
+                                <button class="btn btn-secondary btn-block btn-sm " (click) = "closeAddress()" > Cancelar </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="row justify-content-center mt-4 mb-4">
+        <div class="col-6 text-center">
+           <button class="btn btn-secondary btn-block btn-sm" (click)="logout()"> <b>Logout</b></button>
+        </div>
+    </div>
+</div>
