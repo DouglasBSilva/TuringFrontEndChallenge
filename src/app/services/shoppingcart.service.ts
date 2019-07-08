@@ -27,11 +27,10 @@ export class ShoppingcartService {
   }
 
   public getTotalAmout(){
-      console.log( localStorage.getItem('cart_id'));
       this.client.get(environment.api_url + this.base_url + '/totalAmount/' + localStorage.getItem('cart_id'))
           .subscribe(
               (result: any) =>{
-                    this.amount = result.total_amount;
+                    this.amount = result.total_amount || 0;
               }, error => {
 
               }

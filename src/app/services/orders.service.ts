@@ -15,5 +15,8 @@ export class OrdersService {
     let params = {cart_id, shipping_id, tax_id };
     return this.client.post(environment.api_url + this.base_url, params);
   }
+  public shortDetail(id: number): Observable<any>{
+    return this.client.get(environment.api_url + this.base_url + '/shortDetail/' + id);
+  }
 
 }

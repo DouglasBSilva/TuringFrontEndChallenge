@@ -15,11 +15,17 @@ export class NavBarComponent implements OnInit {
   public departments: Department[];
   public active_department: number;
   @Output() onTryOpenCategories: EventEmitter<number> = new EventEmitter();
-  constructor(
+  @Output() onSearch: EventEmitter<string> = new EventEmitter();
+
+    constructor(
       private departmentService: DepartmentsService
 
   ) { }
 
+  public search(text: string){
+        this.active_department = 0;
+        this.onSearch.emit(text);
+  }
 
   public openCategories(department_id: number){
       this.active_department = (this.active_department === department_id ? 0 : department_id);

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CustomersService} from '@services/customers.service';
-import {BsModalRef} from 'ngx-bootstrap';
+import {BsModalRef, BsModalService} from 'ngx-bootstrap';
+import {RegisterComponent} from '../register/register.component';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -14,8 +15,14 @@ export class LoginComponent implements OnInit {
 
   constructor(
       private customersService: CustomersService,
-      public bsModalRef: BsModalRef
+      public bsModalRef: BsModalRef,
+      private bsModalService: BsModalService
   ) { }
+
+  public goToRegister(){
+      this.bsModalRef.hide();
+      this.bsModalService.show(RegisterComponent);
+  }
 
   public loginFacebook(){
     this.customersService.loginFacebookApi().subscribe(

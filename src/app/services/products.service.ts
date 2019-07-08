@@ -36,4 +36,15 @@ export class ProductsService {
     return this.client.get<any>(environment.api_url + this.base_url + '/inCategory/' + category_id, options);
   }
 
+
+  public search(page: number = 1, limit: number = 20, query_string: string, description_lenght: number = 200): Observable<any> {
+    const options = { params: new HttpParams().set('page',  page.toString())
+          .append('limit', limit.toString())
+          .append('description_lenght', description_lenght.toString())
+          .append('query_string', query_string)
+          .append('all_words', 'off')};
+
+    return this.client.get<any>(environment.api_url + this.base_url + '/search', options);
+  }
+
 }

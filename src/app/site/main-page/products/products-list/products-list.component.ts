@@ -11,6 +11,7 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class ProductsListComponent implements OnInit {
   private filter_id;
+  private search_value;
   private list_type: string = '';
   public products_list: ProductComplete[];
   public page: number = 1;
@@ -83,20 +84,39 @@ export class ProductsListComponent implements OnInit {
       );
   }
 
-    /**
-     *
-     * @param page
-     *
-     * @function check if the page is from department or category to send the righ request
-     */
+  private getProductsBySearch(page: number = 1){
+      this.productsService.search(page, this.products_per_page, this.search_value).subscribe(
+          result => {
+              this.page = page;
+              this.products_list = result.rows;
+              this.total_products = result.count;
+              this.total_pages = Math.ceil((this.total_products / this.products_per_page));
+              this.page_sent = page;
+          }
+      )
+  }
+
   private getProducts(page: number = 1){
           if((this.list_type).toLowerCase() === 'department') {
                 this.getProductsByDepartment(page);
           }else if((this.list_type).toLowerCase() === 'category') {
               this.getProductsByCategory(page);
+          }else if((this.list_type).toLowerCase() === 'search'){
+              this.getProductsBySearch(page);
           }else{
                 this.getProductsAll(page);
           }
+  }
+
+  setSearchText(text: string = ''){
+      if(text.length > 0){
+          this.list_type = 'search';
+
+      } else {
+          this.list_type = '';
+      }
+      this.search_value = text;
+      this.getProducts();
   }
 
   setListFilter = (list_type: string = '', item_id: number = 0) => {

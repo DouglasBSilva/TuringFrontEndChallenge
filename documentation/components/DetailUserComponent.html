@@ -1,0 +1,1240 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>turing-front-end-challenge documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">turing-front-end-challenge documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>DetailUserComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/site/user/detail-user/detail-user.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-detail-user</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./detail-user.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./detail-user.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#bl_edit_address">bl_edit_address</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#bl_edit_credit_card">bl_edit_credit_card</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#customersService">customersService</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#local_user">local_user</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#shippings">shippings</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#user_shipping">user_shipping</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#checkUser">checkUser</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#closeAddress">closeAddress</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#closeCreditCard">closeCreditCard</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getShippings">getShippings</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#logout">logout</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#updateAddress">updateAddress</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#updateCreditCard">updateCreditCard</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(customersService: <a href="../injectables/CustomersService.html">CustomersService</a>, shippingService: <a href="../injectables/ShippingService.html">ShippingService</a>, bsModalRef: BsModalRef)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/site/user/detail-user/detail-user.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>customersService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CustomersService.html" target="_self" >CustomersService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>shippingService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ShippingService.html" target="_self" >ShippingService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>bsModalRef</td>
+                                                  
+                                                        <td>
+                                                                    <code>BsModalRef</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkUser"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            checkUser
+                        </b>
+                        <a href="#checkUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>checkUser()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="66"
+                            class="link-to-prism">src/app/site/user/detail-user/detail-user.component.ts:66</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="closeAddress"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            closeAddress
+                        </b>
+                        <a href="#closeAddress"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>closeAddress(edited: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/app/site/user/detail-user/detail-user.component.ts:58</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>edited</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>false</code>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="closeCreditCard"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            closeCreditCard
+                        </b>
+                        <a href="#closeCreditCard"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>closeCreditCard(edited: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="50"
+                            class="link-to-prism">src/app/site/user/detail-user/detail-user.component.ts:50</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>edited</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>false</code>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getShippings"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            getShippings
+                        </b>
+                        <a href="#getShippings"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getShippings()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="75"
+                            class="link-to-prism">src/app/site/user/detail-user/detail-user.component.ts:75</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="logout"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            logout
+                        </b>
+                        <a href="#logout"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>logout()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">src/app/site/user/detail-user/detail-user.component.ts:34</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="94"
+                            class="link-to-prism">src/app/site/user/detail-user/detail-user.component.ts:94</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateAddress"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            updateAddress
+                        </b>
+                        <a href="#updateAddress"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateAddress()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="40"
+                            class="link-to-prism">src/app/site/user/detail-user/detail-user.component.ts:40</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateCreditCard"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            updateCreditCard
+                        </b>
+                        <a href="#updateCreditCard"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateCreditCard()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="24"
+                            class="link-to-prism">src/app/site/user/detail-user/detail-user.component.ts:24</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="bl_edit_address"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            bl_edit_address</b>
+                            <a href="#bl_edit_address"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/site/user/detail-user/detail-user.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="bl_edit_credit_card"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            bl_edit_credit_card</b>
+                            <a href="#bl_edit_credit_card"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/site/user/detail-user/detail-user.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="customersService"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            customersService</b>
+                            <a href="#customersService"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../injectables/CustomersService.html" target="_self" >CustomersService</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/site/user/detail-user/detail-user.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="local_user"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            local_user</b>
+                            <a href="#local_user"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Customer.html" target="_self" >Customer</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/site/user/detail-user/detail-user.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="shippings"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            shippings</b>
+                            <a href="#shippings"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/site/user/detail-user/detail-user.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="user_shipping"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            user_shipping</b>
+                            <a href="#user_shipping"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;No shipping Region Selected&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/site/user/detail-user/detail-user.component.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import {CustomersService} from &#x27;@services/customers.service&#x27;;
+import {ShippingService} from &#x27;@services/shipping.service&#x27;;
+import {BsModalRef} from &#x27;ngx-bootstrap&#x27;;
+import {Customer} from &#x27;@models/customer.model&#x27;;
+
+@Component({
+  selector: &#x27;app-detail-user&#x27;,
+  templateUrl: &#x27;./detail-user.component.html&#x27;,
+  styleUrls: [&#x27;./detail-user.component.scss&#x27;]
+})
+export class DetailUserComponent implements OnInit {
+  public user_shipping: string &#x3D; &#x27;No shipping Region Selected&#x27;;
+  public bl_edit_address &#x3D; false;
+  public bl_edit_credit_card &#x3D; false;
+  public shippings: [];
+  public local_user: Customer;
+  constructor(
+      public customersService: CustomersService,
+      private shippingService: ShippingService,
+      private bsModalRef: BsModalRef
+  ) { }
+
+  public updateCreditCard() {
+    this.customersService.updateCreditCard(this.local_user.credit_card)
+        .subscribe(
+            result &#x3D;&gt; {
+              this.customersService.user &#x3D; result;
+              this.closeCreditCard();
+            }
+        );
+  }
+
+  public logout(){
+    if(this.customersService.logout()){
+      this.bsModalRef.hide();
+    }
+  }
+
+  public updateAddress() {
+    this.customersService.updateAddress(this.local_user)
+        .subscribe(
+            result &#x3D;&gt; {
+              this.customersService.user &#x3D; result;
+              this.closeAddress();
+            }
+        );
+  }
+
+  public closeCreditCard(edited: boolean&#x3D; false){
+    if(!edited){
+      this.local_user &#x3D; JSON.parse(JSON.stringify(this.customersService.user));
+    }
+
+    this.bl_edit_credit_card &#x3D; false;
+  }
+
+  public closeAddress(edited: boolean&#x3D; false){
+    if(!edited){
+      this.local_user &#x3D; JSON.parse(JSON.stringify(this.customersService.user));
+    }
+
+    this.bl_edit_address &#x3D; false;
+  }
+
+  private checkUser() {
+    let user_active &#x3D; false;
+    if(this.customersService.user){
+      if(this.customersService.user.name){
+        user_active &#x3D; true;
+      }
+    }
+    return true;
+  }
+  private getShippings() {
+    this.shippingService.get()
+        .subscribe(
+            result &#x3D;&gt; {
+              this.shippings &#x3D; result;
+            }
+        );
+  }
+
+  // private getShippingUser(bl_select_shippings:boolean &#x3D; true){
+  //   this.shippingService.find(this.customersService.user.shipping_region_id)
+  //       .subscribe(
+  //           result &#x3D;&gt; {
+  //               this.user_shipping &#x3D; result[0] ? result[0].shipping_region : this.user_shipping;
+  //               if(bl_select_shippings) {this.getShippings();}
+  //           }
+  //       );
+  // }
+
+  ngOnInit() {
+    if(this.checkUser()) {
+      this.getShippings();
+      this.local_user &#x3D; JSON.parse(JSON.stringify(this.customersService.user));
+    } else {
+      this.customersService.user &#x3D; new Customer();
+      this.bsModalRef.hide();
+    }
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container&quot;&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;div class&#x3D;&quot;col-12 text-center p-5&quot;&gt;
+            &lt;span class&#x3D;&quot;fa fa-user-circle fa-4x&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;div class&#x3D;&quot;col-12 text-center text-pink&quot;&gt;
+            &lt;h3 class&#x3D;&quot;font-weight-bold&quot;&gt;{{local_user.name}}&lt;/h3&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;div class&#x3D;&quot;col-12 text-left item pt-2&quot;&gt;
+          &lt;label class&#x3D;&quot;font-weight-bold text-pink&quot;&gt;Email: &lt;/label&gt; &lt;span&gt;{{local_user.email}}&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;div class&#x3D;&quot;col-10 text-left item pt-2 form-group form-inline&quot;&gt;
+            &lt;label&gt;Credit Card: &lt;/label&gt;
+            &lt;input class&#x3D;&quot;form-control form-inline&quot; [disabled]&#x3D;&quot;!bl_edit_credit_card&quot; [(ngModel)]&#x3D;&quot;local_user.credit_card&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-2 text-center&quot;&gt;
+            &lt;button class&#x3D;&quot;btn btn-link text-pink&quot; (click)&#x3D;&quot;bl_edit_credit_card &#x3D; true&quot; *ngIf&#x3D;&quot;!bl_edit_credit_card&quot;&gt; &lt;span class&#x3D;&quot;fa fa-edit item&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+            &lt;button class&#x3D;&quot;btn btn-link text-pink&quot; (click)&#x3D;&quot;updateCreditCard()&quot; *ngIf&#x3D;&quot;bl_edit_credit_card&quot;&gt; &lt;span class&#x3D;&quot;fa fa-save item&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+            &lt;button class&#x3D;&quot;btn btn-link text-pink&quot; (click)&#x3D;&quot;closeCreditCard()&quot; *ngIf&#x3D;&quot;bl_edit_credit_card&quot;&gt; &lt;span class&#x3D;&quot;fa fa-close item&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;row justify-content-center&quot;&gt;
+        &lt;div class&#x3D;&quot;col-11 border&quot;&gt;
+            &lt;div class&#x3D;&quot;row pb-2&quot;&gt;
+                &lt;div class&#x3D;&quot;col-6&quot;&gt;
+                    &lt;h5 class&#x3D;&quot;font-weight-bold text-pink&quot;&gt;
+                        Location Information
+                    &lt;/h5&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;col text-right&quot;&gt;
+                    &lt;button class&#x3D;&quot;btn btn-link text-pink&quot; (click) &#x3D; &quot;bl_edit_address &#x3D; true&quot; [class.d-none]&#x3D;&quot;bl_edit_address&quot;&gt; &lt;span class&#x3D;&quot;fa fa-edit item&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot; row justify-content-center&quot;&gt;
+                &lt;div class&#x3D;&quot;col-11&quot;&gt;
+                    &lt;div class&#x3D;&quot;row&quot;&gt;
+                        &lt;div class&#x3D;&quot;col-12 text-left item&quot;&gt;
+                            &lt;div class&#x3D;&quot;row&quot;&gt;
+                                &lt;div class&#x3D;&quot;col-3&quot; [class.text-dark]&#x3D;&quot;bl_edit_address&quot;&gt;
+                                    &lt;label&gt;Postal Code &lt;span *ngIf&#x3D;&quot;bl_edit_address&quot; class&#x3D;&quot;text-danger font-weight-bold&quot;&gt;*&lt;/span&gt;: &lt;/label&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;col&quot;&gt;
+                                    &lt;input class&#x3D;&quot;form-control form-control-sm&quot; type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;local_user.postal_code&quot; [disabled]&#x3D;&quot;!bl_edit_address&quot;&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;row&quot;&gt;
+                        &lt;div class&#x3D;&quot;col-12 text-left item&quot;&gt;
+                            &lt;div class&#x3D;&quot;row&quot;&gt;
+                                &lt;div class&#x3D;&quot;col-3&quot;&gt;
+                                    &lt;label&gt;Address 1&lt;span *ngIf&#x3D;&quot;bl_edit_address&quot; class&#x3D;&quot;text-danger font-weight-bold&quot;&gt;*&lt;/span&gt;: &lt;/label&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;col&quot;&gt;
+                                    &lt;input class&#x3D;&quot;form-control form-control-sm&quot; type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;local_user.address_1&quot; [disabled]&#x3D;&quot;!bl_edit_address&quot;&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;row&quot;&gt;
+                        &lt;div class&#x3D;&quot;col-12 text-left item&quot;&gt;
+                            &lt;div class&#x3D;&quot;row&quot;&gt;
+                                &lt;div class&#x3D;&quot;col-3&quot;&gt;
+                                    &lt;label&gt;Address 2&lt;span *ngIf&#x3D;&quot;bl_edit_address&quot; class&#x3D;&quot;text-danger font-weight-bold&quot;&gt;*&lt;/span&gt;:&lt;/label&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;col&quot;&gt;
+                                    &lt;input class&#x3D;&quot;form-control form-control-sm&quot; type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;local_user.address_2&quot; [disabled]&#x3D;&quot;!bl_edit_address&quot;&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;row&quot;&gt;
+                        &lt;div class&#x3D;&quot;col-12 text-left item&quot;&gt;
+                            &lt;div class&#x3D;&quot;row&quot;&gt;
+                                &lt;div class&#x3D;&quot;col-3&quot;&gt;
+                                    &lt;label&gt;city&lt;span *ngIf&#x3D;&quot;bl_edit_address&quot; class&#x3D;&quot;text-danger font-weight-bold&quot;&gt;*&lt;/span&gt;:&lt;/label&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;col&quot;&gt;
+                                    &lt;input class&#x3D;&quot;form-control form-control-sm&quot; type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;local_user.city&quot; [disabled]&#x3D;&quot;!bl_edit_address&quot;&gt;
+                                &lt;/div&gt;
+
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;row&quot;&gt;
+                        &lt;div class&#x3D;&quot;col-12 text-left item&quot;&gt;
+                            &lt;div class&#x3D;&quot;row&quot;&gt;
+                                &lt;div class&#x3D;&quot;col-3&quot;&gt;
+                                    &lt;label&gt;region&lt;span *ngIf&#x3D;&quot;bl_edit_address&quot; class&#x3D;&quot;text-danger font-weight-bold&quot;&gt;*&lt;/span&gt;:&lt;/label&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;col&quot;&gt;
+                                    &lt;input class&#x3D;&quot;form-control form-control-sm&quot; type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;local_user.region&quot; [disabled]&#x3D;&quot;!bl_edit_address&quot;&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;row&quot;&gt;
+                        &lt;div class&#x3D;&quot;col-12 text-left item&quot;&gt;
+                            &lt;div class&#x3D;&quot;row&quot;&gt;
+                                &lt;div class&#x3D;&quot;col-3&quot;&gt;
+                                    &lt;label&gt;country&lt;span *ngIf&#x3D;&quot;bl_edit_address&quot; class&#x3D;&quot;text-danger font-weight-bold&quot;&gt;*&lt;/span&gt;:&lt;/label&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;col&quot;&gt;
+                                    &lt;input class&#x3D;&quot;form-control form-control-sm&quot; type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;local_user.country&quot; [disabled]&#x3D;&quot;!bl_edit_address&quot;&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;row&quot;&gt;
+                        &lt;div class&#x3D;&quot;col-12 text-left item&quot;&gt;
+                            &lt;div class&#x3D;&quot;row&quot;&gt;
+                                &lt;div class&#x3D;&quot;col-3&quot;&gt;
+                                    &lt;label&gt;Shipping Region&lt;span *ngIf&#x3D;&quot;bl_edit_address&quot; class&#x3D;&quot;text-danger font-weight-bold&quot;&gt;*&lt;/span&gt;:&lt;/label&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;col&quot;&gt;
+                                    &lt;span *ngIf&#x3D;&quot;(!bl_edit_address &amp;&amp; local_user.shipping_region_id &#x3D;&#x3D; 1)&quot;&gt;{{user_shipping}}&lt;/span&gt;
+                                    &lt;select *ngIf&#x3D;&quot;((bl_edit_address || local_user.shipping_region_id !&#x3D; 1) &amp;&amp; shippings)&quot; class&#x3D;&quot;form-control form-control-sm&quot; type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;local_user.shipping_region_id&quot; [disabled]&#x3D;&quot;!bl_edit_address&quot;&gt;
+                                        &lt;option *ngFor&#x3D;&quot;let shipping of shippings&quot; value&#x3D;&quot;{{shipping.shipping_region_id}}&quot;&gt;{{shipping.shipping_region}}&lt;/option&gt;
+                                    &lt;/select&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;row pb-2 justify-content-center&quot; *ngIf&#x3D;&quot;bl_edit_address&quot;&gt;
+                            &lt;div class&#x3D;&quot;col-4 text-center&quot;&gt;
+                                &lt;button class&#x3D;&quot;btn btn-pink btn-sm btn-block&quot; (click) &#x3D; &quot;updateAddress()&quot;&gt; Salvar &lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;col-4 text-center btn-block&quot;&gt;
+                                &lt;button class&#x3D;&quot;btn btn-secondary btn-block btn-sm &quot; (click) &#x3D; &quot;closeAddress()&quot; &gt; Cancelar &lt;/button&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;div class&#x3D;&quot;row justify-content-center mt-4 mb-4&quot;&gt;
+        &lt;div class&#x3D;&quot;col-6 text-center&quot;&gt;
+           &lt;button class&#x3D;&quot;btn btn-secondary btn-block btn-sm&quot; (click)&#x3D;&quot;logout()&quot;&gt; &lt;b&gt;Logout&lt;/b&gt;&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./detail-user.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">
+$pink :  #f62f5e;
+$dark: #2e2e2e;
+$grey: #efefef;
+$blue-facebook: #3b5998;
+
+.item label{
+  font-weight: bold;
+  color: $pink;
+}
+
+.item span{
+  font-weight: bold;
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="container">    <div class="row">        <div class="col-12 text-center p-5">            <span class="fa fa-user-circle fa-4x"></span>        </div>    </div>    <div class="row">        <div class="col-12 text-center text-pink">            <h3 class="font-weight-bold">{{local_user.name}}</h3>        </div>    </div>    <div class="row">        <div class="col-12 text-left item pt-2">          <label class="font-weight-bold text-pink">Email: </label> <span>{{local_user.email}}</span>        </div>    </div>    <div class="row">        <div class="col-10 text-left item pt-2 form-group form-inline">            <label>Credit Card: </label>            <input class="form-control form-inline" [disabled]="!bl_edit_credit_card" [(ngModel)]="local_user.credit_card">        </div>        <div class="col-2 text-center">            <button class="btn btn-link text-pink" (click)="bl_edit_credit_card = true" *ngIf="!bl_edit_credit_card"> <span class="fa fa-edit item"></span></button>            <button class="btn btn-link text-pink" (click)="updateCreditCard()" *ngIf="bl_edit_credit_card"> <span class="fa fa-save item"></span></button>            <button class="btn btn-link text-pink" (click)="closeCreditCard()" *ngIf="bl_edit_credit_card"> <span class="fa fa-close item"></span></button>        </div>    </div>    <div class="row justify-content-center">        <div class="col-11 border">            <div class="row pb-2">                <div class="col-6">                    <h5 class="font-weight-bold text-pink">                        Location Information                    </h5>                </div>                <div class="col text-right">                    <button class="btn btn-link text-pink" (click) = "bl_edit_address = true" [class.d-none]="bl_edit_address"> <span class="fa fa-edit item"></span></button>                </div>            </div>            <div class=" row justify-content-center">                <div class="col-11">                    <div class="row">                        <div class="col-12 text-left item">                            <div class="row">                                <div class="col-3" [class.text-dark]="bl_edit_address">                                    <label>Postal Code <span *ngIf="bl_edit_address" class="text-danger font-weight-bold">*</span>: </label>                                </div>                                <div class="col">                                    <input class="form-control form-control-sm" type="text" [(ngModel)]="local_user.postal_code" [disabled]="!bl_edit_address">                                </div>                            </div>                        </div>                    </div>                    <div class="row">                        <div class="col-12 text-left item">                            <div class="row">                                <div class="col-3">                                    <label>Address 1<span *ngIf="bl_edit_address" class="text-danger font-weight-bold">*</span>: </label>                                </div>                                <div class="col">                                    <input class="form-control form-control-sm" type="text" [(ngModel)]="local_user.address_1" [disabled]="!bl_edit_address">                                </div>                            </div>                        </div>                    </div>                    <div class="row">                        <div class="col-12 text-left item">                            <div class="row">                                <div class="col-3">                                    <label>Address 2<span *ngIf="bl_edit_address" class="text-danger font-weight-bold">*</span>:</label>                                </div>                                <div class="col">                                    <input class="form-control form-control-sm" type="text" [(ngModel)]="local_user.address_2" [disabled]="!bl_edit_address">                                </div>                            </div>                        </div>                    </div>                    <div class="row">                        <div class="col-12 text-left item">                            <div class="row">                                <div class="col-3">                                    <label>city<span *ngIf="bl_edit_address" class="text-danger font-weight-bold">*</span>:</label>                                </div>                                <div class="col">                                    <input class="form-control form-control-sm" type="text" [(ngModel)]="local_user.city" [disabled]="!bl_edit_address">                                </div>                            </div>                        </div>                    </div>                    <div class="row">                        <div class="col-12 text-left item">                            <div class="row">                                <div class="col-3">                                    <label>region<span *ngIf="bl_edit_address" class="text-danger font-weight-bold">*</span>:</label>                                </div>                                <div class="col">                                    <input class="form-control form-control-sm" type="text" [(ngModel)]="local_user.region" [disabled]="!bl_edit_address">                                </div>                            </div>                        </div>                    </div>                    <div class="row">                        <div class="col-12 text-left item">                            <div class="row">                                <div class="col-3">                                    <label>country<span *ngIf="bl_edit_address" class="text-danger font-weight-bold">*</span>:</label>                                </div>                                <div class="col">                                    <input class="form-control form-control-sm" type="text" [(ngModel)]="local_user.country" [disabled]="!bl_edit_address">                                </div>                            </div>                        </div>                    </div>                    <div class="row">                        <div class="col-12 text-left item">                            <div class="row">                                <div class="col-3">                                    <label>Shipping Region<span *ngIf="bl_edit_address" class="text-danger font-weight-bold">*</span>:</label>                                </div>                                <div class="col">                                    <span *ngIf="(!bl_edit_address && local_user.shipping_region_id == 1)">{{user_shipping}}</span>                                    <select *ngIf="((bl_edit_address || local_user.shipping_region_id != 1) && shippings)" class="form-control form-control-sm" type="text" [(ngModel)]="local_user.shipping_region_id" [disabled]="!bl_edit_address">                                        <option *ngFor="let shipping of shippings" value="{{shipping.shipping_region_id}}">{{shipping.shipping_region}}</option>                                    </select>                                </div>                              </div>                            </div>                        </div>                        <div class="row pb-2 justify-content-center" *ngIf="bl_edit_address">                            <div class="col-4 text-center">                                <button class="btn btn-pink btn-sm btn-block" (click) = "updateAddress()"> Salvar </button>                            </div>                            <div class="col-4 text-center btn-block">                                <button class="btn btn-secondary btn-block btn-sm " (click) = "closeAddress()" > Cancelar </button>                            </div>                        </div>                    </div>                </div>            </div>        </div>    <div class="row justify-content-center mt-4 mb-4">        <div class="col-6 text-center">           <button class="btn btn-secondary btn-block btn-sm" (click)="logout()"> <b>Logout</b></button>        </div>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CartComponent', 'selector': 'app-cart'},{'name': 'CartListComponent', 'selector': 'app-cart-list'},{'name': 'CategoryListComponent', 'selector': 'app-category-list'},{'name': 'CheckShippingAddressComponent', 'selector': 'app-check-shipping-address'},{'name': 'DetailUserComponent', 'selector': 'app-detail-user'},{'name': 'EditUserComponent', 'selector': 'app-edit-user'},{'name': 'ListReviewsComponent', 'selector': 'app-list-reviews'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MainPageComponent', 'selector': 'app-main-page'},{'name': 'NavBarComponent', 'selector': 'app-nav-bar'},{'name': 'PaymentFormComponent', 'selector': 'app-payment-form'},{'name': 'ProductsDetailCompleteComponent', 'selector': 'app-products-detail-complete'},{'name': 'ProductsDetailComponent', 'selector': 'app-products-detail'},{'name': 'ProductsListComponent', 'selector': 'app-products-list'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SecondNavBarComponent', 'selector': 'app-second-nav-bar'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'DetailUserComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'DetailUserComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

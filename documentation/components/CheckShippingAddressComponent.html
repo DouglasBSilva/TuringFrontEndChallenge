@@ -1,0 +1,842 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>turing-front-end-challenge documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">turing-front-end-challenge documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>CheckShippingAddressComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/site/shipping/check-shipping-address/check-shipping-address.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-check-shipping-address</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./check-shipping-address.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./check-shipping-address.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#customersService">customersService</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#local_user">local_user</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#shippings">shippings</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#user_shipping">user_shipping</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#checkUser">checkUser</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#confirmShippingInformation">confirmShippingInformation</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getShippings">getShippings</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(customersService: <a href="../injectables/CustomersService.html">CustomersService</a>, shippingService: <a href="../injectables/ShippingService.html">ShippingService</a>, bsModalRef: BsModalRef, bsModalService: BsModalService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/site/shipping/check-shipping-address/check-shipping-address.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>customersService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CustomersService.html" target="_self" >CustomersService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>shippingService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ShippingService.html" target="_self" >ShippingService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>bsModalRef</td>
+                                                  
+                                                        <td>
+                                                                    <code>BsModalRef</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>bsModalService</td>
+                                                  
+                                                        <td>
+                                                                    <code>BsModalService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkUser"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            checkUser
+                        </b>
+                        <a href="#checkUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>checkUser()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="30"
+                            class="link-to-prism">src/app/site/shipping/check-shipping-address/check-shipping-address.component.ts:30</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="confirmShippingInformation"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            confirmShippingInformation
+                        </b>
+                        <a href="#confirmShippingInformation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>confirmShippingInformation()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="24"
+                            class="link-to-prism">src/app/site/shipping/check-shipping-address/check-shipping-address.component.ts:24</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getShippings"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            getShippings
+                        </b>
+                        <a href="#getShippings"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getShippings()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">src/app/site/shipping/check-shipping-address/check-shipping-address.component.ts:39</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="47"
+                            class="link-to-prism">src/app/site/shipping/check-shipping-address/check-shipping-address.component.ts:47</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="customersService"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            customersService</b>
+                            <a href="#customersService"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../injectables/CustomersService.html" target="_self" >CustomersService</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/site/shipping/check-shipping-address/check-shipping-address.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="local_user"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            local_user</b>
+                            <a href="#local_user"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Customer.html" target="_self" >Customer</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/site/shipping/check-shipping-address/check-shipping-address.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="shippings"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            shippings</b>
+                            <a href="#shippings"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/site/shipping/check-shipping-address/check-shipping-address.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="user_shipping"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            user_shipping</b>
+                            <a href="#user_shipping"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;No shipping Region Selected&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/site/shipping/check-shipping-address/check-shipping-address.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import {Customer} from &#x27;@models/customer.model&#x27;;
+import {CustomersService} from &#x27;@services/customers.service&#x27;;
+import {ShippingService} from &#x27;@services/shipping.service&#x27;;
+import {BsModalRef, BsModalService} from &#x27;ngx-bootstrap&#x27;;
+import {PaymentFormComponent} from &#x27;../payment-form/payment-form.component&#x27;;
+
+@Component({
+  selector: &#x27;app-check-shipping-address&#x27;,
+  templateUrl: &#x27;./check-shipping-address.component.html&#x27;,
+  styleUrls: [&#x27;./check-shipping-address.component.scss&#x27;]
+})
+export class CheckShippingAddressComponent implements OnInit {
+  public user_shipping: string &#x3D; &#x27;No shipping Region Selected&#x27;;
+  public shippings: [];
+  public local_user: Customer;
+  constructor(
+      public customersService: CustomersService,
+      private shippingService: ShippingService,
+      private bsModalRef: BsModalRef,
+      private bsModalService: BsModalService
+  ) { }
+
+  public confirmShippingInformation() {
+    this.bsModalService.show(PaymentFormComponent);
+    this.bsModalRef.hide();
+
+  }
+
+  private checkUser() {
+    let user_active &#x3D; false;
+    if(this.customersService.user){
+      if(this.customersService.user.name){
+        user_active &#x3D; true;
+      }
+    }
+    return true;
+  }
+  private getShippings() {
+    this.shippingService.get()
+        .subscribe(
+            result &#x3D;&gt; {
+              this.shippings &#x3D; result;
+            }
+        );
+  }
+  ngOnInit() {
+    if(this.checkUser()) {
+      this.getShippings();
+      this.local_user &#x3D; JSON.parse(JSON.stringify(this.customersService.user));
+    } else {
+      this.customersService.user &#x3D; new Customer();
+      this.bsModalRef.hide();
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container p-3&quot;&gt;
+    &lt;div class&#x3D;&quot;row justify-content-center&quot;&gt;
+        &lt;div class&#x3D;&quot;col-11 border&quot;&gt;
+            &lt;div class&#x3D;&quot;row pb-2&quot;&gt;
+                &lt;div class&#x3D;&quot;col-6&quot;&gt;
+                    &lt;h5 class&#x3D;&quot;font-weight-bold text-pink&quot;&gt;
+                        Shipping Information
+                    &lt;/h5&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot; row justify-content-center&quot;&gt;
+                &lt;div class&#x3D;&quot;col-11&quot;&gt;
+                    &lt;div class&#x3D;&quot;row&quot;&gt;
+                        &lt;div class&#x3D;&quot;col-12 text-left item&quot;&gt;
+                            &lt;div class&#x3D;&quot;row&quot;&gt;
+                                &lt;div class&#x3D;&quot;col-3&quot;&gt;
+                                    &lt;label&gt;Postal Code &lt;span  class&#x3D;&quot;text-danger font-weight-bold&quot;&gt;*&lt;/span&gt;: &lt;/label&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;col&quot;&gt;
+                                    &lt;input class&#x3D;&quot;form-control form-control-sm&quot; type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;local_user.postal_code&quot; &gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;row&quot;&gt;
+                        &lt;div class&#x3D;&quot;col-12 text-left item&quot;&gt;
+                            &lt;div class&#x3D;&quot;row&quot;&gt;
+                                &lt;div class&#x3D;&quot;col-3&quot;&gt;
+                                    &lt;label&gt;Address 1&lt;span  class&#x3D;&quot;text-danger font-weight-bold&quot;&gt;*&lt;/span&gt;: &lt;/label&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;col&quot;&gt;
+                                    &lt;input class&#x3D;&quot;form-control form-control-sm&quot; type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;local_user.address_1&quot; &gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;row&quot;&gt;
+                        &lt;div class&#x3D;&quot;col-12 text-left item&quot;&gt;
+                            &lt;div class&#x3D;&quot;row&quot;&gt;
+                                &lt;div class&#x3D;&quot;col-3&quot;&gt;
+                                    &lt;label&gt;Address 2&lt;span  class&#x3D;&quot;text-danger font-weight-bold&quot;&gt;*&lt;/span&gt;:&lt;/label&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;col&quot;&gt;
+                                    &lt;input class&#x3D;&quot;form-control form-control-sm&quot; type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;local_user.address_2&quot; &gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;row&quot;&gt;
+                        &lt;div class&#x3D;&quot;col-12 text-left item&quot;&gt;
+                            &lt;div class&#x3D;&quot;row&quot;&gt;
+                                &lt;div class&#x3D;&quot;col-3&quot;&gt;
+                                    &lt;label&gt;city&lt;span  class&#x3D;&quot;text-danger font-weight-bold&quot;&gt;*&lt;/span&gt;:&lt;/label&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;col&quot;&gt;
+                                    &lt;input class&#x3D;&quot;form-control form-control-sm&quot; type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;local_user.city&quot; &gt;
+                                &lt;/div&gt;
+
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;row&quot;&gt;
+                        &lt;div class&#x3D;&quot;col-12 text-left item&quot;&gt;
+                            &lt;div class&#x3D;&quot;row&quot;&gt;
+                                &lt;div class&#x3D;&quot;col-3&quot;&gt;
+                                    &lt;label&gt;region&lt;span  class&#x3D;&quot;text-danger font-weight-bold&quot;&gt;*&lt;/span&gt;:&lt;/label&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;col&quot;&gt;
+                                    &lt;input class&#x3D;&quot;form-control form-control-sm&quot; type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;local_user.region&quot; &gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;row&quot;&gt;
+                        &lt;div class&#x3D;&quot;col-12 text-left item&quot;&gt;
+                            &lt;div class&#x3D;&quot;row&quot;&gt;
+                                &lt;div class&#x3D;&quot;col-3&quot;&gt;
+                                    &lt;label&gt;country&lt;span  class&#x3D;&quot;text-danger font-weight-bold&quot;&gt;*&lt;/span&gt;:&lt;/label&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;col&quot;&gt;
+                                    &lt;input class&#x3D;&quot;form-control form-control-sm&quot; type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;local_user.country&quot; &gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;row&quot;&gt;
+                        &lt;div class&#x3D;&quot;col-12 text-left item&quot;&gt;
+                            &lt;div class&#x3D;&quot;row&quot;&gt;
+                                &lt;div class&#x3D;&quot;col-3&quot;&gt;
+                                    &lt;label&gt;Shipping Region&lt;span class&#x3D;&quot;text-danger font-weight-bold&quot;&gt;*&lt;/span&gt;:&lt;/label&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;col&quot;&gt;
+                                    &lt;select class&#x3D;&quot;form-control form-control-sm&quot;  [(ngModel)]&#x3D;&quot;local_user.shipping_region_id&quot;&gt;
+                                        &lt;option *ngFor&#x3D;&quot;let shipping of shippings&quot; value&#x3D;&quot;{{shipping.shipping_region_id}}&quot;&gt;{{shipping.shipping_region}}&lt;/option&gt;
+                                    &lt;/select&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;row pb-2 justify-content-center mt-3&quot; &gt;
+                        &lt;div class&#x3D;&quot;col-4 text-center&quot;&gt;
+                            &lt;button class&#x3D;&quot;btn btn-pink btn-sm btn-block&quot; (click) &#x3D; &quot;confirmShippingInformation()&quot;&gt; Confirmar &lt;/button&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;col-4 text-center btn-block&quot;&gt;
+                            &lt;button class&#x3D;&quot;btn btn-secondary btn-block btn-sm &quot; (click) &#x3D; &quot;bsModalRef.hide()&quot; &gt; Cancelar &lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./check-shipping-address.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="container p-3">    <div class="row justify-content-center">        <div class="col-11 border">            <div class="row pb-2">                <div class="col-6">                    <h5 class="font-weight-bold text-pink">                        Shipping Information                    </h5>                </div>            </div>            <div class=" row justify-content-center">                <div class="col-11">                    <div class="row">                        <div class="col-12 text-left item">                            <div class="row">                                <div class="col-3">                                    <label>Postal Code <span  class="text-danger font-weight-bold">*</span>: </label>                                </div>                                <div class="col">                                    <input class="form-control form-control-sm" type="text" [(ngModel)]="local_user.postal_code" >                                </div>                            </div>                        </div>                    </div>                    <div class="row">                        <div class="col-12 text-left item">                            <div class="row">                                <div class="col-3">                                    <label>Address 1<span  class="text-danger font-weight-bold">*</span>: </label>                                </div>                                <div class="col">                                    <input class="form-control form-control-sm" type="text" [(ngModel)]="local_user.address_1" >                                </div>                            </div>                        </div>                    </div>                    <div class="row">                        <div class="col-12 text-left item">                            <div class="row">                                <div class="col-3">                                    <label>Address 2<span  class="text-danger font-weight-bold">*</span>:</label>                                </div>                                <div class="col">                                    <input class="form-control form-control-sm" type="text" [(ngModel)]="local_user.address_2" >                                </div>                            </div>                        </div>                    </div>                    <div class="row">                        <div class="col-12 text-left item">                            <div class="row">                                <div class="col-3">                                    <label>city<span  class="text-danger font-weight-bold">*</span>:</label>                                </div>                                <div class="col">                                    <input class="form-control form-control-sm" type="text" [(ngModel)]="local_user.city" >                                </div>                            </div>                        </div>                    </div>                    <div class="row">                        <div class="col-12 text-left item">                            <div class="row">                                <div class="col-3">                                    <label>region<span  class="text-danger font-weight-bold">*</span>:</label>                                </div>                                <div class="col">                                    <input class="form-control form-control-sm" type="text" [(ngModel)]="local_user.region" >                                </div>                            </div>                        </div>                    </div>                    <div class="row">                        <div class="col-12 text-left item">                            <div class="row">                                <div class="col-3">                                    <label>country<span  class="text-danger font-weight-bold">*</span>:</label>                                </div>                                <div class="col">                                    <input class="form-control form-control-sm" type="text" [(ngModel)]="local_user.country" >                                </div>                            </div>                        </div>                    </div>                    <div class="row">                        <div class="col-12 text-left item">                            <div class="row">                                <div class="col-3">                                    <label>Shipping Region<span class="text-danger font-weight-bold">*</span>:</label>                                </div>                                <div class="col">                                    <select class="form-control form-control-sm"  [(ngModel)]="local_user.shipping_region_id">                                        <option *ngFor="let shipping of shippings" value="{{shipping.shipping_region_id}}">{{shipping.shipping_region}}</option>                                    </select>                                </div>                            </div>                        </div>                    </div>                    <div class="row pb-2 justify-content-center mt-3" >                        <div class="col-4 text-center">                            <button class="btn btn-pink btn-sm btn-block" (click) = "confirmShippingInformation()"> Confirmar </button>                        </div>                        <div class="col-4 text-center btn-block">                            <button class="btn btn-secondary btn-block btn-sm " (click) = "bsModalRef.hide()" > Cancelar </button>                        </div>                    </div>                </div>            </div>        </div>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CartComponent', 'selector': 'app-cart'},{'name': 'CartListComponent', 'selector': 'app-cart-list'},{'name': 'CategoryListComponent', 'selector': 'app-category-list'},{'name': 'CheckShippingAddressComponent', 'selector': 'app-check-shipping-address'},{'name': 'DetailUserComponent', 'selector': 'app-detail-user'},{'name': 'EditUserComponent', 'selector': 'app-edit-user'},{'name': 'ListReviewsComponent', 'selector': 'app-list-reviews'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MainPageComponent', 'selector': 'app-main-page'},{'name': 'NavBarComponent', 'selector': 'app-nav-bar'},{'name': 'PaymentFormComponent', 'selector': 'app-payment-form'},{'name': 'ProductsDetailCompleteComponent', 'selector': 'app-products-detail-complete'},{'name': 'ProductsDetailComponent', 'selector': 'app-products-detail'},{'name': 'ProductsListComponent', 'selector': 'app-products-list'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SecondNavBarComponent', 'selector': 'app-second-nav-bar'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'CheckShippingAddressComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'CheckShippingAddressComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -15,7 +15,7 @@
                                     <input type="text" class="text-center form-control form-control-sm" [(ngModel)]="page" (input)="alterPage($event)">
                                 </div>
                                 <div class="col pl-0 pt-2">
-                                    <span> / {{total_pages}}</span>
+                                    <span> / {{(total_pages == 0 ? 1 : total_pages)}}</span>
                                 </div>
                             </div>
                         </div>

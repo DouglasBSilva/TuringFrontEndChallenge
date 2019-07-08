@@ -23,6 +23,15 @@ export class MainPageComponent implements OnInit {
   ) { }
 
 
+    public onSearch(text: string = ''){
+        this.department_id = null;
+        this.category_id = null;
+       if(text.length > 0){
+           this.product_list.setSearchText(text);
+       }else{
+           this.product_list.setListFilter();
+       }
+    }
 
 
   public tryOpenCategory(department_id: number){

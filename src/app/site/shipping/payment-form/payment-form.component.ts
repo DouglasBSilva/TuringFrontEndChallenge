@@ -53,13 +53,22 @@ export class PaymentFormComponent implements OnInit {
     this.orderService.create(localStorage.getItem('cart_id'), this.customersService.user.shipping_region_id)
         .subscribe(
             result => {
-              this.apiStripeService.charge(stripe_token, result.orderId, this.customersService.user.name , parseInt(this.shoppingCartService.amount.toFixed(0), 10))
-                  .subscribe(
-                      success => {
-                          this.toastr.success('Your order was concluded with success', 'Success');
-                          window.location.href = '';
-                      }
-                  );
+                this.orderService.shortDetail(result.orderId)
+                    .subscribe(
+                        order => {
+                            // Api amount value is retorning like  Float string. and the Stripe Api need a integer
+
+                            let amount = parseInt((parseFloat(order.total_amount) *100).toFixed(0), 10);
+
+                            this.apiStripeService.charge(stripe_token, order.order_id, order.name , amount)
+                                .subscribe(
+                            success => {
+                                    this.toastr.success('Your order was concluded with success', 'Success');
+                                    window.location.href = '';
+                                }
+                            );
+                        }
+                    )
             }, error => {
               this.bsModalRef.hide();
             }
