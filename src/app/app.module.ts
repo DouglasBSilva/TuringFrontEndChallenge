@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './site/main-page/nav-bar/nav-bar.component';
@@ -80,7 +81,8 @@ export function getAuthServiceConfigs() {
         AlertModule.forRoot(),
         BrowserAnimationsModule, // required animations module
         ToastrModule.forRoot(), // ToastrModule added
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        AngularFireModule.initializeApp(environment.firebaseConfig)
     ],
     entryComponents: [
         ProductsDetailCompleteComponent,

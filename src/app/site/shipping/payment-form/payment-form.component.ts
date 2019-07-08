@@ -42,7 +42,7 @@ export class PaymentFormComponent implements OnInit {
   constructor(
       private fb: FormBuilder,
       private stripeService: StripeService,
-      private shoppingCartService: ShoppingcartService,
+      public shoppingCartService: ShoppingcartService,
       private orderService: OrdersService,
       private customersService: CustomersService,
       private bsModalRef: BsModalRef,

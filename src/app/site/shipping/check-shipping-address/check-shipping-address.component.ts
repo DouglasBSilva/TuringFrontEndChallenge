@@ -17,7 +17,7 @@ export class CheckShippingAddressComponent implements OnInit {
   constructor(
       public customersService: CustomersService,
       private shippingService: ShippingService,
-      private bsModalRef: BsModalRef,
+      public bsModalRef: BsModalRef,
       private bsModalService: BsModalService
   ) { }
 

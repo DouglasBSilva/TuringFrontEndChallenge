@@ -189,12 +189,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(customersService: <a href="../injectables/CustomersService.html">CustomersService</a>, bsModalRef: BsModalRef, bsModalService: BsModalService)</code>
+<code>constructor(customersService: <a href="../injectables/CustomersService.html">CustomersService</a>, bsModalRef: BsModalRef, bsModalService: BsModalService, toastr: ToastrService)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/site/auth/register/register.component.ts:15</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/site/auth/register/register.component.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -247,6 +247,18 @@
                                                     </td>
                                                     
                                                 </tr>
+                                                <tr>
+                                                        <td>toastr</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastrService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
                                         </tbody>
                                     </table>
                             </div>
@@ -289,8 +301,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="22"
-                            class="link-to-prism">src/app/site/auth/register/register.component.ts:22</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="24"
+                            class="link-to-prism">src/app/site/auth/register/register.component.ts:24</a></div>
                 </td>
             </tr>
 
@@ -328,8 +340,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="42"
-                            class="link-to-prism">src/app/site/auth/register/register.component.ts:42</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="46"
+                            class="link-to-prism">src/app/site/auth/register/register.component.ts:46</a></div>
                 </td>
             </tr>
 
@@ -367,8 +379,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="27"
-                            class="link-to-prism">src/app/site/auth/register/register.component.ts:27</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">src/app/site/auth/register/register.component.ts:29</a></div>
                 </td>
             </tr>
 
@@ -411,7 +423,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/site/auth/register/register.component.ts:19</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/site/auth/register/register.component.ts:20</a></div>
                             </td>
                         </tr>
 
@@ -439,7 +451,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/site/auth/register/register.component.ts:13</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/site/auth/register/register.component.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -467,7 +479,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/site/auth/register/register.component.ts:12</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/site/auth/register/register.component.ts:13</a></div>
                             </td>
                         </tr>
 
@@ -495,7 +507,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/site/auth/register/register.component.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/site/auth/register/register.component.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -523,7 +535,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/site/auth/register/register.component.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/site/auth/register/register.component.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -540,6 +552,7 @@
 import {CustomersService} from &#x27;@services/customers.service&#x27;;
 import {BsModalRef, BsModalService} from &#x27;ngx-bootstrap&#x27;;
 import {LoginComponent} from &#x27;../login/login.component&#x27;;
+import { ToastrService } from &#x27;ngx-toastr&#x27;;
 
 @Component({
   selector: &#x27;app-register&#x27;,
@@ -555,7 +568,8 @@ export class RegisterComponent implements OnInit {
   constructor(
       private customersService: CustomersService,
       public bsModalRef: BsModalRef,
-      private bsModalService: BsModalService
+      private bsModalService: BsModalService,
+      private  toastr: ToastrService
   ) { }
   public goToLogin(){
     this.bsModalRef.hide();
@@ -569,6 +583,8 @@ export class RegisterComponent implements OnInit {
               result &#x3D;&gt; {
                 this.customersService.user &#x3D; result.customer;
                 localStorage.setItem(&#x27;accessToken&#x27;, result.accessToken);
+                this.toastr.success(&#x27;Successfully registered&#x27;, &#x27;Success&#x27;);
+                this.bsModalRef.hide();
               }, error &#x3D;&gt; {
                 localStorage.setItem(&#x27;accessToken&#x27;, &#x27;&#x27;);
               }

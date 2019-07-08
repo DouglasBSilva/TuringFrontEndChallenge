@@ -501,7 +501,8 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { BrowserModule } from &#x27;@angular/platform-browser&#x27;;
 import { NgModule } from &#x27;@angular/core&#x27;;
-
+import { AngularFireModule } from &#x27;@angular/fire&#x27;;
+import { environment } from &#x27;../environments/environment&#x27;;
 import { AppRoutingModule } from &#x27;./app-routing.module&#x27;;
 import { AppComponent } from &#x27;./app.component&#x27;;
 import { NavBarComponent } from &#x27;./site/main-page/nav-bar/nav-bar.component&#x27;;
@@ -581,7 +582,8 @@ export function getAuthServiceConfigs() {
         AlertModule.forRoot(),
         BrowserAnimationsModule, // required animations module
         ToastrModule.forRoot(), // ToastrModule added
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        AngularFireModule.initializeApp(environment.firebaseConfig)
     ],
     entryComponents: [
         ProductsDetailCompleteComponent,

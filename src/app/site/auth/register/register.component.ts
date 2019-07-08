@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {CustomersService} from '@services/customers.service';
 import {BsModalRef, BsModalService} from 'ngx-bootstrap';
 import {LoginComponent} from '../login/login.component';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-register',
@@ -17,7 +18,8 @@ export class RegisterComponent implements OnInit {
   constructor(
       private customersService: CustomersService,
       public bsModalRef: BsModalRef,
-      private bsModalService: BsModalService
+      private bsModalService: BsModalService,
+      private  toastr: ToastrService
   ) { }
   public goToLogin(){
     this.bsModalRef.hide();
@@ -31,6 +33,8 @@ export class RegisterComponent implements OnInit {
               result => {
                 this.customersService.user = result.customer;
                 localStorage.setItem('accessToken', result.accessToken);
+                this.toastr.success('Successfully registered', 'Success');
+                this.bsModalRef.hide();
               }, error => {
                 localStorage.setItem('accessToken', '');
               }
